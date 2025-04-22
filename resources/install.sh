@@ -33,9 +33,9 @@ if ! response "$answer"; then
     exit 1
 else
     echo -e  "${YELLOW}Instalando proyecto...${NC}"
-    mkdir P_UPPStore && cd P_UPPStore 
-    git clone https://github.com/CodeMakeSoft/blue_app.git && cd blue_app && clear
-
+    mkdir P_UPPStore && cd P_UPPStore && \
+    git clone https://github.com/CodeMakeSoft/blue_app.git && \
+    cd blue_app && \
 cat <<EOF > .env
 APP_NAME="UPP Store"
 APP_ENV=local
@@ -120,11 +120,14 @@ PAYPAL_LOCALE=es_MX
 PAYPAL_VALIDATE_SSL=true
 EOF
 
-composer install && \
-php artisan key:generate && \
-php artisan storage:link && \
-php artisan migrate:fresh --seed && \
-npm install && \
+    npm install && \
+    npm install --save-dev vite laravel-vite-plugin @vitejs/plugin-vue && \
+    composer clear-cache && \
+    composer install --prefer-dist --no-plugins --no-scripts --ignore-platform-reqs && \
+    php artisan key:generate && \
+    php artisan storage:link && \
+    php artisan migrate:fresh --seed && \
+
 clear && \
 echo -e  "${GREEN}======================================"
 echo -e  "Proyecto instalado correctamente."
