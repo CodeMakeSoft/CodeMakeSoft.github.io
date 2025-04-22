@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Script to install the UPP Store project
 set -e
 
