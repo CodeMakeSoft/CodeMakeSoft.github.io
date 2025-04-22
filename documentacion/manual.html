@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual | CMS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #3a7bd5;
+            --secondary: #00d2ff;
+            --dark-bg: rgba(0, 0, 0, 0.8);
+            --light-text: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #121212;
+            color: var(--light-text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        .tech-navbar {
+            background: var(--dark-bg);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .diagram-section {
+            background: var(--dark-bg);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .diagram-section h2 {
+            color: var(--secondary);
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .diagram-container {
+            text-align: center;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+        }
+        
+        .diagram-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .diagram-caption {
+            margin-top: 1rem;
+            font-style: italic;
+            color: #aaa;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0;
+            color: var(--secondary);
+            text-decoration: none;
+            padding: 12px 24px;
+            border: 1px solid var(--secondary);
+            border-radius: 4px;
+            transition: all 0.3s;
+            background: rgba(0, 210, 255, 0.05);
+        }
+        
+        .back-link:hover {
+            background: rgba(0, 210, 255, 0.1);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <nav class="tech-navbar">
+        <div>
+            <img src="../img/CMS_white.png" alt="CMS Logo" style="height: 30px; vertical-align: middle;">
+            <span style="margin-left: 10px; font-weight: 600;">MANUAL</span>
+        </div>
+        <div>
+            <a href="../index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Volver al inicio
+            </a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <a href="../resources/install.sh" download>
+            Descargar Instalador para Linux (.sh)
+        </a>
+    </div>
+</body>
+</html>
