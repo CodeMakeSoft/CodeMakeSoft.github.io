@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diccionario UPP Store | CMS</title>
+    <title>Diccionario | CMS</title>
     <link rel="icon" type="image/png" href="/resources/Images/Logos/CMS_white.png">
     <link rel="stylesheet" href="/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -12,19 +12,9 @@
 <body>
     <div class="tech-background"></div>
     
-    <nav class="tech-navbar">
-        <div class="nav-logo">
-            <img src="/resources/Images/Logos/CMS_white.png" alt="CMS Logo">
-            <span>DICCIONARIO</span>
-        </div>
-        <div>
-            <a href="/index.html" class="back-link">
-                <i class="fas fa-arrow-left"></i> Volver al inicio
-            </a>
-        </div>
-    </nav>
+    <div id="navbar-container"></div>
 
-    <div class="dictionary-container">
+    <div class="doc-container">
         <header class="dictionary-header">
             <h1>Diccionario de Datos UPP Store</h1>
             <p>Definición completa de todas las tablas, campos y relaciones del sistema e-commerce</p>
@@ -51,50 +41,37 @@
                     <tr>
                         <td>id</td>
                         <td>BIGINT</td>
-                        <td><span class="pk">PK</span>, <span class="pk">AI</span></td>
-                        <td>ID único del usuario</td>
-                    </tr>
-                        <th>Campo</th>
-                        <th>Tipo</th>
-                        <th>Restricciones</th>
-                        <th>Descripción</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>id</td>
-                        <td>BIGINT</td>
-                        <td><span class="pk">PK</span>, <span class="pk">AI</span></td>
+                        <td><span class="constraint pk">PK</span>, <span class="constraint ai">AI</span></td>
                         <td>ID único del usuario</td>
                     </tr>
                     <tr>
                         <td>email</td>
                         <td>VARCHAR(255)</td>
-                        <td><span class="unique">UNIQUE</span>, NOT NULL</td>
+                        <td><span class="constraint unique">UNIQUE</span>, <span class="constraint not-null">NOT NULL</span></td>
                         <td>Correo electrónico del usuario</td>
                     </tr>
                     <tr>
                         <td>phone</td>
                         <td>VARCHAR(20)</td>
-                        <td><span class="unique">UNIQUE</span>, NULLABLE</td>
+                        <td><span class="constraint unique">UNIQUE</span>, NULLABLE</td>
                         <td>Teléfono móvil</td>
                     </tr>
                     <tr>
                         <td>password</td>
                         <td>VARCHAR(255)</td>
-                        <td>NOT NULL</td>
+                        <td><span class="constraint not-null">NOT NULL</span></td>
                         <td>Contraseña cifrada (hash)</td>
                     </tr>
                     <tr>
                         <td>created_at</td>
                         <td>TIMESTAMP</td>
-                        <td>NOT NULL</td>
+                        <td><span class="constraint not-null">NOT NULL</span></td>
                         <td>Fecha de creación</td>
                     </tr>
                     <tr>
                         <td>updated_at</td>
                         <td>TIMESTAMP</td>
-                        <td>NOT NULL</td>
+                        <td><span class="constraint not-null">NOT NULL</span></td>
                         <td>Fecha de última actualización</td>
                     </tr>
                 </tbody>
@@ -102,7 +79,7 @@
             <p class="table-caption">Tabla principal de usuarios del sistema</p>
             
             <h3>password_reset_tokens</h3>
-            <table>
+            <table class="dictionary-table">
                 <thead>
                     <tr>
                         <th>Campo</th>
@@ -147,7 +124,7 @@
             </div>
             
             <h3>products</h3>
-            <table>
+            <table class="dictionary-table">
                 <thead>
                     <tr>
                         <th>Campo</th>
@@ -159,7 +136,7 @@
                     <tr>
                         <td>id</td>
                         <td>BIGINT</td>
-                        <td><span class="pk">PK</span>, <span class="pk">AI</span></td>
+                        <td><span class="constraint pk">PK</span>, <span class="constraint ai">AI</span></td>
                     </tr>
                     <tr>
                         <td>name</td>
@@ -184,29 +161,29 @@
                     <tr>
                         <td>category_id</td>
                         <td>BIGINT</td>
-                        <td><span class="fk">FK</span> a categories.id</td>
+                        <td><span class="constraint fk">FK</span> a categories.id</td>
                     </tr>
                     <tr>
                         <td>brand_id</td>
                         <td>BIGINT</td>
-                        <td><span class="fk">FK</span> a brands.id</td>
+                        <td><span class="constraint fk">FK</span> a brands.id</td>
                     </tr>
                     <tr>
                         <td>created_at</td>
                         <td>TIMESTAMP</td>
-                        <td>NOT NULL</td>
+                        <td><span class="constraint not-null">NOT NULL</span></td>
                     </tr>
                     <tr>
                         <td>updated_at</td>
                         <td>TIMESTAMP</td>
-                        <td>NOT NULL</td>
+                        <td><span class="constraint not-null">NOT NULL</span></td>
                     </tr>
                 </tbody>
             </table>
             <p class="table-caption">Tabla principal de productos del catálogo</p>
             
             <h3>categories</h3>
-            <table>
+            <table class="dictionary-table">
                 <thead>
                     <tr>
                         <th>Campo</th>
@@ -218,7 +195,7 @@
                     <tr>
                         <td>id</td>
                         <td>BIGINT</td>
-                        <td><span class="pk">PK</span>, <span class="pk">AI</span></td>
+                        <td><span class="constraint pk">PK</span>, <span class="constraint ai">AI</span></td>
                     </tr>
                     <tr>
                         <td>name</td>
@@ -233,14 +210,14 @@
                     <tr>
                         <td>parent_id</td>
                         <td>BIGINT</td>
-                        <td><span class="fk">FK</span> a categories.id (jerarquía)</td>
+                        <td><span class="constraint fk">FK</span> a categories.id (jerarquía)</td>
                     </tr>
                 </tbody>
             </table>
             <p class="table-caption">Categorización de productos</p>
             
             <h3>brands</h3>
-            <table>
+            <table class="dictionary-table">
                 <thead>
                     <tr>
                         <th>Campo</th>
@@ -252,7 +229,7 @@
                     <tr>
                         <td>id</td>
                         <td>BIGINT</td>
-                        <td><span class="pk">PK</span>, <span class="pk">AI</span></td>
+                        <td><span class="constraint pk">PK</span>, <span class="constraint ai">AI</span></td>
                     </tr>
                     <tr>
                         <td>name</td>
@@ -285,7 +262,7 @@
             </div>
             
             <h3>carts</h3>
-            <table>
+            <table class="dictionary-table">
                 <thead>
                     <tr>
                         <th>Campo</th>
@@ -298,25 +275,25 @@
                     <tr>
                         <td>id</td>
                         <td>BIGINT</td>
-                        <td><span class="pk">PK</span>, <span class="pk">AI</span></td>
+                        <td><span class="constraint pk">PK</span>, <span class="constraint ai">AI</span></td>
                         <td>ID único del carrito</td>
                     </tr>
                     <tr>
                         <td>user_id</td>
                         <td>BIGINT</td>
-                        <td><span class="fk">FK</span> a users.id, <span class="unique">UNIQUE</span></td>
+                        <td><span class="constraint fk">FK</span> a users.id, <span class="constraint unique">UNIQUE</span></td>
                         <td>Usuario asociado al carrito (1:1)</td>
                     </tr>
                     <tr>
                         <td>created_at</td>
                         <td>TIMESTAMP</td>
-                        <td>NOT NULL</td>
+                        <td><span class="constraint not-null">NOT NULL</span></td>
                         <td>Fecha de creación</td>
                     </tr>
                     <tr>
                         <td>updated_at</td>
                         <td>TIMESTAMP</td>
-                        <td>NOT NULL</td>
+                        <td><span class="constraint not-null">NOT NULL</span></td>
                         <td>Fecha de última actualización</td>
                     </tr>
                 </tbody>
@@ -324,7 +301,7 @@
             <p class="table-caption">Tabla maestra de carritos de compra</p>
             
             <h3>cart_items</h3>
-            <table>
+            <table class="dictionary-table">
                 <thead>
                     <tr>
                         <th>Campo</th>
@@ -337,31 +314,31 @@
                     <tr>
                         <td>id</td>
                         <td>BIGINT</td>
-                        <td><span class="pk">PK</span>, <span class="pk">AI</span></td>
+                        <td><span class="constraint pk">PK</span>, <span class="constraint ai">AI</span></td>
                         <td>ID único del ítem</td>
                     </tr>
                     <tr>
                         <td>cart_id</td>
                         <td>BIGINT</td>
-                        <td><span class="fk">FK</span> a carts.id</td>
+                        <td><span class="constraint fk">FK</span> a carts.id</td>
                         <td>Carrito al que pertenece</td>
                     </tr>
                     <tr>
                         <td>product_id</td>
                         <td>BIGINT</td>
-                        <td><span class="fk">FK</span> a products.id</td>
+                        <td><span class="constraint fk">FK</span> a products.id</td>
                         <td>Producto agregado</td>
                     </tr>
                     <tr>
                         <td>quantity</td>
                         <td>INT</td>
-                        <td>DEFAULT 1</td>
+                        <td><span class="constraint default">DEFAULT 1</span></td>
                         <td>Cantidad del producto</td>
                     </tr>
                     <tr>
                         <td>added_at</td>
                         <td>TIMESTAMP</td>
-                        <td>NOT NULL</td>
+                        <td><span class="constraint not-null">NOT NULL</span></td>
                         <td>Fecha de agregado al carrito</td>
                     </tr>
                 </tbody>
@@ -376,8 +353,7 @@
                 <li>Integración con sistema de inventario</li>
             </ul>
         </div>
-        
-        <!-- Módulo de Órdenes -->
+
         <div class="module-card">
             <div class="module-title">
                 <div class="icon"><i class="fas fa-receipt"></i></div>
@@ -385,7 +361,7 @@
             </div>
             
             <h3>orders</h3>
-            <table>
+            <table class="dictionary-table">
                 <thead>
                     <tr>
                         <th>Campo</th>
@@ -397,12 +373,12 @@
                     <tr>
                         <td>id</td>
                         <td>BIGINT</td>
-                        <td><span class="pk">PK</span>, <span class="pk">AI</span></td>
+                        <td><span class="constraint pk">PK</span>, <span class="constraint ai">AI</span></td>
                     </tr>
                     <tr>
                         <td>user_id</td>
                         <td>BIGINT</td>
-                        <td><span class="fk">FK</span> a users.id</td>
+                        <td><span class="constraint fk">FK</span> a users.id</td>
                     </tr>
                     <tr>
                         <td>order_number</td>
@@ -427,14 +403,14 @@
                     <tr>
                         <td>created_at</td>
                         <td>TIMESTAMP</td>
-                        <td>NOT NULL</td>
+                        <td><span class="constraint not-null">NOT NULL</span></td>
                     </tr>
                 </tbody>
             </table>
             <p class="table-caption">Registro de órdenes de compra</p>
             
             <h3>order_items</h3>
-            <table>
+            <table class="dictionary-table">
                 <thead>
                     <tr>
                         <th>Campo</th>
@@ -446,17 +422,17 @@
                     <tr>
                         <td>id</td>
                         <td>BIGINT</td>
-                        <td><span class="pk">PK</span>, <span class="pk">AI</span></td>
+                        <td><span class="constraint pk">PK</span>, <span class="constraint ai">AI</span></td>
                     </tr>
                     <tr>
                         <td>order_id</td>
                         <td>BIGINT</td>
-                        <td><span class="fk">FK</span> a orders.id</td>
+                        <td><span class="constraint fk">FK</span> a orders.id</td>
                     </tr>
                     <tr>
                         <td>product_id</td>
                         <td>BIGINT</td>
-                        <td><span class="fk">FK</span> a products.id</td>
+                        <td><span class="constraint fk">FK</span> a products.id</td>
                     </tr>
                     <tr>
                         <td>quantity</td>
@@ -473,7 +449,7 @@
             <p class="table-caption">Ítems de cada orden de compra</p>
             
             <h3>payments</h3>
-            <table>
+            <table class="dictionary-table">
                 <thead>
                     <tr>
                         <th>Campo</th>
@@ -485,12 +461,12 @@
                     <tr>
                         <td>id</td>
                         <td>BIGINT</td>
-                        <td><span class="pk">PK</span>, <span class="pk">AI</span></td>
+                        <td><span class="constraint pk">PK</span>, <span class="constraint ai">AI</span></td>
                     </tr>
                     <tr>
                         <td>order_id</td>
                         <td>BIGINT</td>
-                        <td><span class="fk">FK</span> a orders.id</td>
+                        <td><span class="constraint fk">FK</span> a orders.id</td>
                     </tr>
                     <tr>
                         <td>amount</td>
@@ -533,7 +509,7 @@
             </div>
             
             <h3>countries</h3>
-            <table>
+            <table class="dictionary-table">
                 <thead>
                     <tr>
                         <th>Campo</th>
@@ -545,7 +521,7 @@
                     <tr>
                         <td>id</td>
                         <td>BIGINT</td>
-                        <td><span class="pk">PK</span>, <span class="pk">AI</span></td>
+                        <td><span class="constraint pk">PK</span>, <span class="constraint ai">AI</span></td>
                     </tr>
                     <tr>
                         <td>name</td>
@@ -561,7 +537,7 @@
             </table>
             
             <h3>addresses</h3>
-            <table>
+            <table class="dictionary-table">
                 <thead>
                     <tr>
                         <th>Campo</th>
@@ -573,12 +549,12 @@
                     <tr>
                         <td>id</td>
                         <td>BIGINT</td>
-                        <td><span class="pk">PK</span>, <span class="pk">AI</span></td>
+                        <td><span class="constraint pk">PK</span>, <span class="constraint ai">AI</span></td>
                     </tr>
                     <tr>
                         <td>user_id</td>
                         <td>BIGINT</td>
-                        <td><span class="fk">FK</span> a users.id</td>
+                        <td><span class="constraint fk">FK</span> a users.id</td>
                     </tr>
                     <tr>
                         <td>street</td>
@@ -603,7 +579,7 @@
                     <tr>
                         <td>country_id</td>
                         <td>BIGINT</td>
-                        <td><span class="fk">FK</span> a countries.id</td>
+                        <td><span class="constraint fk">FK</span> a countries.id</td>
                     </tr>
                     <tr>
                         <td>is_default</td>
@@ -614,7 +590,7 @@
             </table>
             
             <h3>shippings</h3>
-            <table>
+            <table class="dictionary-table">
                 <thead>
                     <tr>
                         <th>Campo</th>
@@ -626,17 +602,17 @@
                     <tr>
                         <td>id</td>
                         <td>BIGINT</td>
-                        <td><span class="pk">PK</span>, <span class="pk">AI</span></td>
+                        <td><span class="constraint pk">PK</span>, <span class="constraint ai">AI</span></td>
                     </tr>
                     <tr>
                         <td>order_id</td>
                         <td>BIGINT</td>
-                        <td><span class="fk">FK</span> a orders.id</td>
+                        <td><span class="constraint fk">FK</span> a orders.id</td>
                     </tr>
                     <tr>
                         <td>address_id</td>
                         <td>BIGINT</td>
-                        <td><span class="fk">FK</span> a addresses.id</td>
+                        <td><span class="constraint fk">FK</span> a addresses.id</td>
                     </tr>
                     <tr>
                         <td>method</td>
@@ -673,7 +649,7 @@
             </div>
             
             <h3>roles</h3>
-            <table>
+            <table class="dictionary-table">
                 <thead>
                     <tr>
                         <th>Campo</th>
@@ -685,7 +661,7 @@
                     <tr>
                         <td>id</td>
                         <td>BIGINT</td>
-                        <td><span class="pk">PK</span>, <span class="pk">AI</span></td>
+                        <td><span class="constraint pk">PK</span>, <span class="constraint ai">AI</span></td>
                     </tr>
                     <tr>
                         <td>name</td>
@@ -701,7 +677,7 @@
             </table>
             
             <h3>permissions</h3>
-            <table>
+            <table class="dictionary-table">
                 <thead>
                     <tr>
                         <th>Campo</th>
@@ -713,7 +689,7 @@
                     <tr>
                         <td>id</td>
                         <td>BIGINT</td>
-                        <td><span class="pk">PK</span>, <span class="pk">AI</span></td>
+                        <td><span class="constraint pk">PK</span>, <span class="constraint ai">AI</span></td>
                     </tr>
                     <tr>
                         <td>name</td>
@@ -729,7 +705,7 @@
             </table>
             
             <h3>model_has_roles</h3>
-            <table>
+            <table class="dictionary-table">
                 <thead>
                     <tr>
                         <th>Campo</th>
@@ -741,7 +717,7 @@
                     <tr>
                         <td>role_id</td>
                         <td>BIGINT</td>
-                        <td><span class="fk">FK</span> a roles.id</td>
+                        <td><span class="constraint fk">FK</span> a roles.id</td>
                     </tr>
                     <tr>
                         <td>model_type</td>
@@ -764,10 +740,10 @@
                 <li>Protección de rutas y acciones</li>
             </ul>
         </div>
-
-        <a href="/index.html" class="back-link">
-            <i class="fas fa-arrow-left"></i> Volver al inicio
-        </a>
     </div>
+
+    
+    
+    <script src="/js/script.js"></script>
 </body>
 </html>
