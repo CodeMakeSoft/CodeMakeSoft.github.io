@@ -441,25 +441,6 @@ h1 {
     opacity: 0.8;
 }
 
-/* .back-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin: 1rem 0 2rem;
-    color: var(--accent);
-    text-decoration: none;
-    padding: 0.75rem 1.5rem;
-    border: 1px solid var(--accent);
-    border-radius: 4px;
-    transition: all 0.3s;
-    background: rgba(0, 240, 255, 0.05);
-}
-
-.back-link:hover {
-    background: rgba(0, 240, 255, 0.1);
-    transform: translateY(-2px);
-} */
-
 .diagram-section ul {
     padding-left: 1.5rem;
     margin: 1rem 0;
@@ -606,23 +587,85 @@ h1 {
     opacity: 0.8;
 }
 
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
-    .tech-navbar {
+   /* Hamburguesa */
+    .hamburger {
+        display: block;
+        position: absolute;
+        left: 15px;
+        top: 15px;
+    }
+
+    /* Sidebar */
+    #navLinks {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 250px;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
         flex-direction: column;
-        padding: 0.8rem 1rem;
-        height: 50px;
-        padding: 0.5rem 1rem;
+        justify-content: flex-start;
+        padding-top: 70px;
+        gap: 1.5rem;
+        transition: left 0.3s ease;
+        z-index: 999;
+        margin-top: 0;
     }
-    
-    .nav-links {
-        margin-top: 1rem;
-        flex-wrap: wrap;
+
+    #navLinks.active {
+        left: 0;
+    }
+
+    /* Navbar principal */
+    .tech-navbar {
+        position: static;
+        flex-direction: row;
         justify-content: center;
+        padding: 0.5rem 1rem;
+        height: 60px;
     }
-    
+
+    /* Logo */
+    .nav-logo {
+        margin-left: 40px; /* Espacio para el botón hamburguesa */
+    }
+
+    /* Enlaces individuales */
     .nav-link {
-        font-size: 0.8rem;
+        width: 100%;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        justify-content: flex-start;
+    }
+
+    /* Efecto hover para móvil */
+    .nav-link:hover::after {
+        width: 5px;
+        height: 100%;
+        left: 0;
+        top: 0;
     }
 
     .tech-header {
@@ -690,6 +733,12 @@ h1 {
 @media (max-width: 450px) {
     h1 {
         font-size: 2.2rem;
+    }
+
+    .tech-navbar {
+        height: 50px;
+        width: 80%;
+        margin: auto;
     }
     
     .tagline {
@@ -763,4 +812,16 @@ h1 {
     .dictionary-table td {
         padding: 10px 12px;
     }
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
 }
