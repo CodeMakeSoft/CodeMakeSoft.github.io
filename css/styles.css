@@ -3,8 +3,9 @@
     --primary: #ffffff;
     --secondary: #e0e0e0;
     --dark: #0a0a14;
-    --semidark: #232423;
-    --accent: #00f0ff;
+    --semidark: #23242380;
+    --main: #00f0ff;
+    --highlight: #4FC3F7;
     --card-bg: rgba(20, 20, 40, 0.8);
     --footer-bg: rgba(15, 15, 30, 0.95);
     --navbar-bg: rgba(0, 0, 0, 0.8);
@@ -81,7 +82,7 @@ body {
 .nav-logo span {
     font-weight: 600;
     font-size: 1.2rem;
-    background: linear-gradient(90deg, var(--primary), var(--accent));
+    background: linear-gradient(90deg, var(--primary), var(--main));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -115,7 +116,7 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, var(--primary), var(--accent));
+    background: linear-gradient(90deg, var(--primary), var(--main));
     transition: width 0.3s ease;
 }
 
@@ -232,7 +233,7 @@ h1 {
     align-items: center;
     justify-content: center;
     background: rgba(0, 0, 0, 0.3);
-    border: 1.5px solid var(--accent);
+    border: 1.5px solid var(--main);
     padding: 10px;
     transition: all 0.5s ease;
 }
@@ -256,13 +257,13 @@ h1 {
     margin-bottom: 0.5rem;
     position: relative;
     z-index: 1;
-    background: linear-gradient(90deg, var(--primary), var(--accent));
+    background: linear-gradient(90deg, var(--primary), var(--main));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .position {
-    color: var(--accent);
+    color: var(--main);
     font-weight: 500;
     font-size: 1rem;
     margin-bottom: 1.5rem;
@@ -275,7 +276,7 @@ h1 {
 .tech-divider {
     width: 80px;
     height: 3px;
-    background: linear-gradient(90deg, var(--primary), var(--accent));
+    background: linear-gradient(90deg, var(--primary), var(--main));
     margin: 1.5rem auto;
     opacity: 0.8;
     border-radius: 3px;
@@ -284,7 +285,7 @@ h1 {
 
 .tech-card:hover .tech-divider {
     width: 100px;
-    background: linear-gradient(90deg, var(--accent), var(--primary));
+    background: linear-gradient(90deg, var(--main), var(--primary));
 }
 
 .skills {
@@ -363,7 +364,7 @@ h1 {
 }
 
 .email-link:hover {
-    color: var(--accent);
+    color: var(--main);
 }
 
 .footer-social {
@@ -378,7 +379,7 @@ h1 {
 }
 
 .footer-social a:hover {
-    color: var(--accent);
+    color: var(--main);
 }
 
 .footer-copyright {
@@ -409,7 +410,7 @@ h1 {
 }
 
 .diagram-section h2 {
-    color: var(--accent);
+    color: var(--main);
     margin-top: 0;
     display: flex;
     align-items: center;
@@ -442,12 +443,12 @@ h1 {
     opacity: 0.8;
 }
 
-.diagram-section ul {
+ul {
     padding-left: 1.5rem;
     margin: 1rem 0;
 }
 
-.diagram-section li {
+li {
     margin-bottom: 0.5rem;
     color: var(--secondary);
 }
@@ -472,7 +473,7 @@ h1 {
     align-items: center;
     gap: 15px;
     margin-bottom: 1.5rem;
-    color: var(--accent);
+    color: var(--main);
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--border-light);
 }
@@ -507,7 +508,7 @@ h1 {
     background: rgba(58, 123, 213, 0.3);
     text-align: left;
     padding: 14px 16px;
-    color: var(--accent);
+    color: var(--main);
     font-weight: 600;
     text-transform: uppercase;
     font-size: 0.85rem;
@@ -606,6 +607,7 @@ h1 {
     padding: 1rem;
     color: #d4d4d4;
     overflow-x: auto;
+    margin: 1rem 0;
 }
 
 .copiar-codigo {
@@ -620,11 +622,43 @@ h1 {
     padding: 5px 10px;
 }
 
-.problema {
-    background: #fff8e6;
-    padding: 1rem;
-    border-left: 4px solid #ffc107;
+.lista {
+    margin-bottom: 3rem;
+}
+
+.download-link {
+    color: #4FC3F7; /* Azul claro para fondo oscuro */
+    text-decoration: underline;
+    font-weight: 600;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.download-link:hover {
+    color: #29B6F6; /* Azul más brillante al pasar el mouse */
+    text-decoration: none;
+}
+
+.download-link i {
+    margin-left: 0.3em;
+    font-size: 0.85em;
+    vertical-align: middle;
+}
+
+.dependencias {
+    color: var(--primary);
     margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.dependencias-bajo {
+    color: var(--primary);
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.icon-space {
+    margin-right: 0.5em; /* Espacio entre ícono y texto */
+    color: var(--highlight); /* También un azul suave */
 }
 
 /* Responsive Design */
@@ -748,6 +782,44 @@ h1 {
         overflow-x: auto;
         white-space: nowrap;
     }
+
+    /* Manual */
+    .manual-instalacion {
+        padding: 1.5rem;
+    }
+
+    .manual-paso {
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    .codigo-container {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .copiar-codigo {
+        right: 8px;
+        top: 8px;
+        padding: 4px 8px;
+        font-size: 0.85rem;
+    }
+
+    .lista {
+        margin-bottom: 2rem;
+    }
+
+    .dependencias {
+        font-size: 1rem;
+    }
+
+    .dependencias-bajo {
+        font-size: 0.8rem;
+    }
+
+    .download-link i {
+        font-size: 0.75em;
+    }
 }
 
 @media (max-width: 450px) {
@@ -826,6 +898,23 @@ h1 {
     .dictionary-table th,
     .dictionary-table td {
         padding: 10px 12px;
+    }
+
+    /* Manual */
+    .manual-instalacion {
+        padding: 1rem;
+    }
+
+    .codigo-container {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .copiar-codigo {
+        right: 5px;
+        top: 5px;
+        padding: 3px 6px;
+        font-size: 0.8rem;
     }
 }
 

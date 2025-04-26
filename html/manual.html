@@ -24,82 +24,306 @@
     <div class="doc-container">
         <section class="manual-instalacion">
             <article class="manual-paso">
-                <h2><i class="fas fa-download"></i> Requisitos Previos</h2>
-                <ul class="requisitos-lista">
-                    <li><strong>Sistema Operativo:</strong> Windows 10+/Linux/macOS</li>
-                    <li><strong>Node.js:</strong> Versión 16.x o superior</li>
-                    <li><strong>Git:</strong> Para clonar el repositorio</li>
-                    <li><strong>Espacio en disco:</strong> Mínimo 500MB</li>
+                <h2 class="module-title"><i class="fas fa-list-check"></i> DEPENDENCIAS DEL SISTEMA</h2>
+                <ul class="lista">
+                    <li><i class="fas fa-laptop icon-space"></i> <strong>Sistema Operativo:</strong> Windows 10+/ Linux/ macOS</li>
+                    <li><i class="fas fa-terminal icon-space"></i> <strong>Composer:</strong> Mínimo 2.8.8</li>
+                    <li><i class="fab fa-node-js icon-space"></i> <strong>Node.js:</strong> Mínimo 22.14.0</li>
+                    <li><i class="fab fa-npm icon-space"></i> <strong>NPM:</strong> Mínimo 10.9.2</li>
+                    <li><i class="fab fa-git-al icon-spacet"></i> <strong>Git:</strong> Recomendado 2.49.0</li>
+                    <li><i class="fas fa-code-branch icon-space"></i> <strong>XAMPP:</strong> Recomendado 8.2.12-0 (VS16)</li>
+                    <ul>
+                        <li><i class="fas fa-server icon-space"></i> <strong>Apache:</strong> Recomendado 2.4.x</li>
+                        <li><i class="fas fa-database icon-space"></i> <strong>MySQL/MariaDB:</strong> 10.4 o superior</li>
+                        <li><i class="fas fa-code icon-space"></i> <strong>PHP:</strong> 8.2.12 o superior</li>
+                    </ul>
+                    <li><i class="fas fa-edit icon-space"></i> <strong>VSCode:</strong> Editor recomendado</li>
+                    <li><i class="fas fa-hdd icon-space"></i> <strong>Espacio en disco:</strong> Mínimo 400MB</li>
                 </ul>
-            </article>
-        
-            <article class="manual-paso">
-                <h2><i class="fas fa-terminal"></i> Instalación</h2>
+
+                <h2 class="module-title"><i class="fas fa-download"></i> ENLACES PARA DESCARGAR</h2>
+                    <ul class="lista">
+                        <li><i class="fas fa-terminal icon-space"></i> 
+                        <strong>Composer:</strong> 
+                        <a href="https://getcomposer.org/download/" class="download-link" target="_blank" rel="noopener noreferrer">
+                            Descargar Composer <i class="fas fa-external-link-alt"></i>
+                        </a></li>
+                        <li><i class="fab fa-node-js icon-space"></i> 
+                        <strong>Node.js:</strong> 
+                        <a href="https://nodejs.org/en/download" class="download-link" target="_blank" rel="noopener noreferrer">
+                            Descargar Node.js <i class="fas fa-external-link-alt"></i>
+                        </a></li>
+                        <ul><li><i class="fab fa-npm icon-space"></i><strong>NPM:</strong> Incluido con Node.js</li></ul>
+                        <li><i class="fab fa-git-alt icon-space"></i><strong>Git:</strong> 
+                        <a href="https://git-scm.com/downloads" class="download-link" target="_blank" rel="noopener noreferrer">
+                            Descargar Git <i class="fas fa-external-link-alt"></i>
+                        </a></li>
+                        <li><i class="fas fa-code-branch icon-space"></i> 
+                        <strong>XAMPP:</strong> 
+                        <a href="https://www.apachefriends.org/es/download.html" class="download-link" target="_blank" rel="noopener noreferrer">
+                            Descargar XAMPP <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <ul>
+                            <li><i class="fas fa-server icon-space"></i><strong>Apache:</strong> Incluido en XAMPP</li>
+                            <li><i class="fas fa-database icon-space"></i><strong>MySQL/MariaDB:</strong> Incluido en XAMPP</li>
+                            <li><i class="fas fa-code icon-space"></i><strong>PHP:</strong> Incluido en XAMPP</li>
+                        </ul>
+                        </li>
+                        <li><i class="fas fa-edit icon-space"></i> 
+                        <strong>VSCode:</strong> 
+                        <a href="https://code.visualstudio.com/Download" class="download-link" target="_blank" rel="noopener noreferrer">
+                            Descargar VSCode <i class="fas fa-external-link-alt"></i>
+                        </a></li>
+                    </ul>
+                <h2 class="module-title"><i class="fas fa-terminal"></i> INSTALACIÓN POR CONSOLA (LINUX/MACOS)</h2>
+                <p class="dependencias">Composer</p>
+                <p class="dependencias-bajo">Linux & MacOs</p>
                 <div class="codigo-container">
                     <button class="copiar-codigo" onclick="copiarCodigo('cod1')">
                         <i class="far fa-copy"></i>
                     </button>
-                    <pre id="cod1"><code class="language-bash"># Clonar repositorio
-        git clone https://github.com/tu-usuario/tu-proyecto.git
-        cd tu-proyecto</code></pre>
+                    <pre id="cod1"><code class="language-bash"># Instalar Composer
+curl -sS https://getcomposer.org/installer | php
+
+# Mover composer.phar a una ubicación accesible globalmente
+sudo mv composer.phar /usr/local/bin/composer
+
+# Verificar la instalación
+composer --version</code></pre>
                 </div>
-        
+                <p class="dependencias">Node.js y npm</p>
+                <p class="dependencias-bajo">Linux (Debian/Ubuntu)</p>
                 <div class="codigo-container">
-                    <button class="copiar-codigo" onclick="copiarCodigo('cod2')">
+                    <button class="copiar-codigo" onclick="copiarCodigo('cod1')">
                         <i class="far fa-copy"></i>
                     </button>
-                    <pre id="cod2"><code class="language-bash"># Instalar dependencias
-        npm install
-        # ó
-        yarn install</code></pre>
+                    <pre id="cod1"><code class="language-bash"># Actualizar el índice de paquetes y instalar Node.js
+sudo apt update
+sudo apt install nodejs npm
+
+# Verificar la instalación
+node --version
+npm --version</code></pre>
+                </div>
+                <p class="dependencias-bajo">MacOs</p>
+                <div class="codigo-container">
+                    <button class="copiar-codigo" onclick="copiarCodigo('cod1')">
+                        <i class="far fa-copy"></i>
+                    </button>
+                    <pre id="cod1"><code class="language-bash"># Instalar Node.js con Homebrew:
+brew install node
+
+# Verificar la instalación
+node --version
+npm --version</code></pre>
+                </div>
+                <p class="dependencias">Git</p>
+                <p class="dependencias-bajo">Linux (Debian/Ubuntu)</p>
+                <div class="codigo-container">
+                    <button class="copiar-codigo" onclick="copiarCodigo('cod1')">
+                        <i class="far fa-copy"></i>
+                    </button>
+                    <pre id="cod1"><code class="language-bash"># Instalar Git
+sudo apt update
+sudo apt install git
+
+# Verificar la instalación
+git --version</code></pre>
+                </div>
+                <p class="dependencias-bajo">MacOs</p>
+                <div class="codigo-container">
+                    <button class="copiar-codigo" onclick="copiarCodigo('cod1')">
+                        <i class="far fa-copy"></i>
+                    </button>
+                    <pre id="cod1"><code class="language-bash"># Instalar Git
+brew install git
+
+# Verificar la instalación
+git --version</code></pre>
+                </div>
+                <p class="dependencias">VSCode</p>
+                <p class="dependencias-bajo">Linux (Debian/Ubuntu)</p>
+                <div class="codigo-container">
+                    <button class="copiar-codigo" onclick="copiarCodigo('cod1')">
+                        <i class="far fa-copy"></i>
+                    </button>
+                    <pre id="cod1"><code class="language-bash"># Instalar VSCode
+sudo apt update
+sudo apt install code
+
+# Verificar la instalación
+code --version</code></pre>
+                </div>
+                <p class="dependencias-bajo">MacOs</p>
+                <div class="codigo-container">
+                    <button class="copiar-codigo" onclick="copiarCodigo('cod1')">
+                        <i class="far fa-copy"></i>
+                    </button>
+                    <pre id="cod1"><code class="language-bash"># Instalar VSCode
+brew install --cask visual-studio-code
+
+# Verificar la instalación
+code --version</code></pre>
+                </div>
+                <p class="dependencias">XAMPP</p>
+                <p class="description">Descarga y ejecuta el .run para Linux o el .dmg para MacOs (asegurate de darle permisos de ejecución) desde
+                    <a href="https://www.apachefriends.org/es/download.html" class="download-link" target="_blank" rel="noopener noreferrer">
+                        aqui.
+                    </a>
+                </p>
+            </article>
+        
+            <article class="manual-paso">
+                <h2 class="module-title"><i class="fas fa-cogs"></i> CONSIDERACIONES INICIALES</h2>
+                <p class="dependencias">php.ini</p>
+                <div class="codigo-container">
+                    <button class="copiar-codigo" onclick="copiarCodigo('cod1')">
+                        <i class="far fa-copy"></i>
+                    </button>
+                    <pre id="cod1"><code class="language-bash"># Asegurate de tener estas extensiones descomentadas en tu php.ini
+extension=bz2
+extension=curl
+extension=iconv
+extension=intl
+extension=mysqli
+extension=pdo_mysql
+extension=zip</code></pre>
+                </div>
+                <p class="dependencias">Localhost</p>
+                <p class="description">Enciende tu servidor de Apache y MySQL desde <strong><i>XAMPP</i></strong> o la terminal si usas Linux/Mac.</p>
+                <div class="diagram-container">
+                    <img src="/resources/Images/Documentation/phpMyAdmin.png" alt="Diagrama de Relaciones del Sistema">
+                    <p class="diagram-caption">Figura 1: Apache y MySQL encendidos.</p>
+                </div>
+                <p class="dependencias">Creación de la base de datos</p>
+                <p class="description">Crea la base de datos desde phpMyAdmin llamada: <strong><i>blue_app</i></strong></p>
+                <div class="diagram-container">
+                    <img src="/resources/Images/Documentation/makeDatabase.png" alt="Diagrama de Relaciones del Sistema">
+                    <p class="diagram-caption">Figura 2: Creación de la base de datos.</p>
+                </div>
+                <p class="dependencias">Consulta SQL</p>
+                <div class="codigo-container">
+                    <button class="copiar-codigo" onclick="copiarCodigo('cod1')">
+                        <i class="far fa-copy"></i>
+                    </button>
+                    <pre id="cod1"><code class="language-bash">CREATE DATABASE blue_app;</code></pre>
+                </div>
+                <p class="dependencias">Desactivar antivirus (únicamente en Windows)</p>
+                <p class="description">El antivirus puede bloquear archivos o conexiones de Composer, confundiéndolos con falsos positivos (cree que son virus ya que descarga y descomprime muchos archivos al mismo tiempo), causando errores. Desactiva la <strong><i>protección en tiempo real</i></strong> temporalmente en Defender o cualquier otro antivirus.</p>
+                <div class="diagram-container">
+                    <img src="/resources/Images/Documentation/antivirus_disabled.jpg" alt="Diagrama de Relaciones del Sistema">
+                    <p class="diagram-caption">Figura 3: Desactivar protección en tiempo real.</p>
                 </div>
             </article>
         
             <article class="manual-paso">
-                <h2><i class="fas fa-cog"></i> Configuración</h2>
-                <p>Crea un archivo <code>.env</code> en la raíz del proyecto con:</p>
+                <h2 class="module-title"><i class="fas fa-tools"></i> INSTALACIÓN</h2>
+                <p class="dependencias">Descarga el siguiente script y guárdalo en <strong><i>htdocs</i></strong>:&nbsp; 
+                    <a href="/resources/Instalation/install.sh" class="download-link" download>
+                        install.sh<i class="fas fa-download"></i>
+                    </a>
+                </p> <p>&nbsp;</p>
+                <p class="description">Posiciónate en el directorio <strong><i>htdocs</i></strong> y ejecuta una shell con interprete de <strong><i>Bash</i></strong>.</p>
+                <p class="dependencias">Windows</p>
+                <p class="description">Ejecuta <strong><i>Git Bash</i></strong> (se instalo junto con Git) y añade estos comandos:</p>
+
                 <div class="codigo-container">
-                    <button class="copiar-codigo" onclick="copiarCodigo('cod3')">
+                    <button class="copiar-codigo" onclick="copiarCodigo('cod1')">
                         <i class="far fa-copy"></i>
                     </button>
-                    <pre id="cod3"><code class="language-env">API_KEY=tu_clave_aqui
-        PORT=3000
-        DB_URL=mongodb://localhost:27017/tu_db</code></pre>
+                    <pre id="cod1"><code class="language-bash"># Muevete a la ruta: C:\xampp\htdocs
+cd C:/xampp/htdocs
+
+# Ejecuta el script
+./install.sh</code></pre>
                 </div>
+                <p class="dependencias">Linux/MacOs</p>
+                <p class="description">Ejecuta la terminal nativa o la de tu preferencia y añade estos comandos:</p>
+                <p class="dependencias-bajo">Linux</p>
+                <div class="codigo-container">
+                    <button class="copiar-codigo" onclick="copiarCodigo('cod1')">
+                        <i class="far fa-copy"></i>
+                    </button>
+                    <pre id="cod1"><code class="language-bash"># Muevete a la ruta: /opt/lampp/htdocs
+cd /opt/lampp/htdocs
+
+# Ejecuta el script
+./install.sh</code></pre>
+                </div>
+                <p class="dependencias-bajo">MacOs</p>
+                <div class="codigo-container">
+                    <button class="copiar-codigo" onclick="copiarCodigo('cod1')">
+                        <i class="far fa-copy"></i>
+                    </button>
+                    <pre id="cod1"><code class="language-bash"># Muevete a la ruta: /Applications/XAMPP/htdocs
+cd /Applications/XAMPP/htdocs
+
+# Ejecuta el script
+./install.sh</code></pre>
+                </div>
+                <p class="dependencias">Instalación finalizada (Linux/MacOs/Windows)</p>
+                <p class="description">Cuando haya concluido la instalación ejecuta en tu terminal:</p>
+                <div class="codigo-container">
+                    <button class="copiar-codigo" onclick="copiarCodigo('cod1')">
+                        <i class="far fa-copy"></i>
+                    </button>
+                    <pre id="cod1"><code class="language-bash">code P_UPPStore/blue_app</code></pre>
+                </div>
+                <p class="description">Esto abrira el proyecto en VSCode (recuerda que puede ser el editor de tu preferencia).</p>
             </article>
         
             <article class="manual-paso">
-                <h2><i class="fas fa-play"></i> Ejecución</h2>
+                <h2 class="module-title"><i class="fas fa-play"></i> EJECUCIÓN DEL PROYECTO</h2>
+                <div class="diagram-container">
+                    <img src="/resources/Images/Documentation/vscode.png" alt="Diagrama de Relaciones del Sistema">
+                    <p class="diagram-caption">Figura 4: Proyecto en VSCode.</p>
+                </div>
+                <p class="description">Ejecuta dos terminales sobre <strong><i>blue_app</i></strong>, en la primera añade:</p>
                 <div class="codigo-container">
-                    <button class="copiar-codigo" onclick="copiarCodigo('cod4')">
+                    <button class="copiar-codigo" onclick="copiarCodigo('cod1')">
                         <i class="far fa-copy"></i>
                     </button>
-                    <pre id="cod4"><code class="language-bash"># Modo desarrollo
-        npm run dev
-        
-        # Modo producción
-        npm start</code></pre>
+                    <pre id="cod1"><code class="language-bash">npm run dev</code></pre>
+                </div>
+                <p class="description">En la segunda añade:</p>
+                <div class="codigo-container">
+                    <button class="copiar-codigo" onclick="copiarCodigo('cod1')">
+                        <i class="far fa-copy"></i>
+                    </button>
+                    <pre id="cod1"><code class="language-bash">php artisan serve</code></pre>
+                </div>
+                <p class="description">Esto iniciara el servidor de desarrollo y el servidor de Laravel, respectivamente.</p>
+                <p class="description">Abre tu navegador y dirígete a la siguiente dirección:</p>
+                <div class="codigo-container">
+                    <button class="copiar-codigo" onclick="copiarCodigo('cod1')">
+                        <i class="far fa-copy"></i>
+                    </button>
+                    <pre id="cod1"><code class="language-bash">http://localhost:8000</code></pre>
+                </div>
+                <div class="diagram-container">
+                    <img src="/resources/Images/Documentation/navegator.png" alt="Diagrama de Relaciones del Sistema">
+                    <p class="diagram-caption">Figura 5: Proyecto ejecutado.</p>
                 </div>
             </article>
-        
             <article class="manual-paso">
-                <h2><i class="fas fa-bug"></i> Solución de Problemas</h2>
-                <div class="problema">
-                    <h3>Error: Puerto en uso</h3>
-                    <p><strong>Solución:</strong> Libera el puerto o cambia la configuración:</p>
-                    <div class="codigo-container">
-                        <pre><code class="language-bash"># Linux/macOS
-        kill -9 $(lsof -ti:3000)
-        
-        # Windows
-        taskkill /F /PID <PID></code></pre>
-                    </div>
+                <h2 class="module-title"><i class="fas fa-user-cog"></i> PRUEBA EL PROYECTO</h2>
+                <p class="description">¡Sí tienes cualquier duda sobre la instalación no dudes en contactarnos!</p>
+                <p class="description-bajo">El .env fue configurado en automático, así como las dependencias, además puedes cambiar la información para PayPal.</p>
+                <p class="description-bajo">No olvides hacer pull periódicamente para recibir los cambios y actualizaciones:</p>
+                <div class="codigo-container">
+                    <button class="copiar-codigo" onclick="copiarCodigo('cod1')">
+                        <i class="far fa-copy"></i>
+                    </button>
+                    <pre id="cod1"><code class="language-bash">git pull</code></pre>
+                </div>
+                <div class="diagram-container">
+                    <img src="/resources/Images/Other/CMS_dog.png" alt="Diagrama de Relaciones del Sistema">
+                    <p class="diagram-caption">El equipo de Code Make Soft: ¡Gracias!</p>
                 </div>
             </article>
         </section>
         
         <script>
-        // Función para copiar código
         function copiarCodigo(id) {
             const codigo = document.getElementById(id);
             navigator.clipboard.writeText(codigo.innerText)
@@ -112,9 +336,6 @@
                 });
         }
         </script>
-        <!-- <a href="/resources/Instalation/install.sh" download>
-            Descargar Instalador (.sh)
-        </a> -->
     </div>
 
     <script src="/js/script.js"></script>

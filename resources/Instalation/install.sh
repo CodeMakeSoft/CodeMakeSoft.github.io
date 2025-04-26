@@ -36,6 +36,8 @@ else
     mkdir P_UPPStore && cd P_UPPStore && \
     git clone https://github.com/CodeMakeSoft/blue_app.git && \
     cd blue_app && \
+    git checkout main && \
+    git branch --set-upstream-to=origin/main && \
 cat <<EOF > .env
 APP_NAME="UPP Store"
 APP_ENV=local
