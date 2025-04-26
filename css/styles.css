@@ -606,8 +606,14 @@ li {
     border-radius: 5px;
     padding: 1rem;
     color: #d4d4d4;
-    overflow-x: auto;
+    overflow: visible; /* Importante: permitir que el botón se muestre fuera del contenedor */
     margin: 1rem 0;
+}
+
+.codigo-container pre {
+    overflow-x: auto; /* El scroll ahora está en el pre */
+    padding-top: 40px; /* Espacio para el botón */
+    margin: 0; /* Eliminar márgenes predeterminados */
 }
 
 .copiar-codigo {
@@ -620,6 +626,17 @@ li {
     cursor: pointer;
     border-radius: 4px;
     padding: 5px 10px;
+    z-index: 10;
+}
+
+/* Scroll para WebKit (Chrome/Safari) */
+.codigo-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.codigo-container::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 3px;
 }
 
 .lista {

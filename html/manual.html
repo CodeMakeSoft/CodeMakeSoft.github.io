@@ -79,17 +79,17 @@
                 <p class="dependencias">Composer</p>
                 <p class="dependencias-bajo">Linux & MacOs</p>
                 <div class="codigo-container">
-                    <button class="copiar-codigo" onclick="copiarCodigo('cod1')">
-                        <i class="far fa-copy"></i>
-                    </button>
-                    <pre id="cod1"><code class="language-bash"># Instalar Composer
+                <button class="copiar-codigo" onclick="copiarCodigo('cod1')">
+                    <i class="far fa-copy"></i>
+                </button>
+                    <div class="scroll-container">
+                        <pre id="cod1"><code class="language-bash"># Instalar Composer
 curl -sS https://getcomposer.org/installer | php
-
 # Mover composer.phar a una ubicación accesible globalmente
 sudo mv composer.phar /usr/local/bin/composer
-
 # Verificar la instalación
 composer --version</code></pre>
+                    </div>
                 </div>
                 <p class="dependencias">Node.js y npm</p>
                 <p class="dependencias-bajo">Linux (Debian/Ubuntu)</p>
@@ -97,25 +97,29 @@ composer --version</code></pre>
                     <button class="copiar-codigo" onclick="copiarCodigo('cod2')">
                         <i class="far fa-copy"></i>
                     </button>
-                    <pre id="cod2"><code class="language-bash"># Actualizar el índice de paquetes y instalar Node.js
+                    <div class="scroll-container">
+                        <pre id="cod2"><code class="language-bash"># Actualizar el índice de paquetes y instalar Node.js
 sudo apt update
 sudo apt install nodejs npm
 
 # Verificar la instalación
 node --version
 npm --version</code></pre>
+                    </div>
                 </div>
                 <p class="dependencias-bajo">MacOs</p>
                 <div class="codigo-container">
                     <button class="copiar-codigo" onclick="copiarCodigo('cod3')">
                         <i class="far fa-copy"></i>
                     </button>
-                    <pre id="cod3"><code class="language-bash"># Instalar Node.js con Homebrew:
+                    <div class="scroll-container">
+                        <pre id="cod3"><code class="language-bash"># Instalar Node.js con Homebrew:
 brew install node
 
 # Verificar la instalación
 node --version
 npm --version</code></pre>
+                    </div>
                 </div>
                 <p class="dependencias">Git</p>
                 <p class="dependencias-bajo">Linux (Debian/Ubuntu)</p>
@@ -123,23 +127,27 @@ npm --version</code></pre>
                     <button class="copiar-codigo" onclick="copiarCodigo('cod4')">
                         <i class="far fa-copy"></i>
                     </button>
-                    <pre id="cod4"><code class="language-bash"># Instalar Git
+                    <div class="scroll-container">
+                        <pre id="cod4"><code class="language-bash"># Instalar Git
 sudo apt update
 sudo apt install git
 
 # Verificar la instalación
 git --version</code></pre>
+                    </div>
                 </div>
                 <p class="dependencias-bajo">MacOs</p>
                 <div class="codigo-container">
                     <button class="copiar-codigo" onclick="copiarCodigo('cod5')">
                         <i class="far fa-copy"></i>
                     </button>
-                    <pre id="cod5"><code class="language-bash"># Instalar Git
+                    <div class="scroll-container">    
+                        <pre id="cod5"><code class="language-bash"># Instalar Git
 brew install git
 
 # Verificar la instalación
 git --version</code></pre>
+                    </div>
                 </div>
                 <p class="dependencias">VSCode</p>
                 <p class="dependencias-bajo">Linux (Debian/Ubuntu)</p>
@@ -147,23 +155,27 @@ git --version</code></pre>
                     <button class="copiar-codigo" onclick="copiarCodigo('cod6')">
                         <i class="far fa-copy"></i>
                     </button>
-                    <pre id="cod6"><code class="language-bash"># Instalar VSCode
+                    <div class="scroll-container">
+                        <pre id="cod6"><code class="language-bash"># Instalar VSCode
 sudo apt update
 sudo apt install code
 
 # Verificar la instalación
 code --version</code></pre>
+                    </div>
                 </div>
                 <p class="dependencias-bajo">MacOs</p>
                 <div class="codigo-container">
                     <button class="copiar-codigo" onclick="copiarCodigo('cod7')">
                         <i class="far fa-copy"></i>
                     </button>
-                    <pre id="cod7"><code class="language-bash"># Instalar VSCode
+                    <div class="scroll-container">
+                        <pre id="cod7"><code class="language-bash"># Instalar VSCode
 brew install --cask visual-studio-code
 
 # Verificar la instalación
 code --version</code></pre>
+                    </div>
                 </div>
                 <p class="dependencias">XAMPP</p>
                 <p class="description">Descarga y ejecuta el .run para Linux o el .dmg para MacOs (asegurate de darle permisos de ejecución) desde
@@ -180,7 +192,8 @@ code --version</code></pre>
                     <button class="copiar-codigo" onclick="copiarCodigo('cod8')">
                         <i class="far fa-copy"></i>
                     </button>
-                    <pre id="cod8"><code class="language-bash"># Asegurate de tener estas extensiones descomentadas en tu php.ini
+                    <div class="scroll-container">
+                        <pre id="cod8"><code class="language-bash"># Asegurate de tener estas extensiones descomentadas en tu php.ini
 extension=bz2
 extension=curl
 extension=iconv
@@ -188,6 +201,7 @@ extension=intl
 extension=mysqli
 extension=pdo_mysql
 extension=zip</code></pre>
+                    </div>
                 </div>
                 <p class="dependencias">Localhost</p>
                 <p class="description">Enciende tu servidor de Apache y MySQL desde <strong><i>XAMPP</i></strong> o la terminal si usas Linux/Mac.</p>
@@ -231,11 +245,13 @@ extension=zip</code></pre>
                     <button class="copiar-codigo" onclick="copiarCodigo('cod10')">
                         <i class="far fa-copy"></i>
                     </button>
-                    <pre id="cod10"><code class="language-bash"># Muevete a la ruta: C:\xampp\htdocs
+                    <div class="scroll-container">
+                        <pre id="cod10"><code class="language-bash"># Muevete a la ruta: C:\xampp\htdocs
 cd C:/xampp/htdocs
 
 # Ejecuta el script
 ./install.sh</code></pre>
+                    </div>
                 </div>
                 <p class="dependencias">Linux/MacOs</p>
                 <p class="description">Ejecuta la terminal nativa o la de tu preferencia y añade estos comandos:</p>
@@ -244,22 +260,26 @@ cd C:/xampp/htdocs
                     <button class="copiar-codigo" onclick="copiarCodigo('cod11')">
                         <i class="far fa-copy"></i>
                     </button>
-                    <pre id="cod11"><code class="language-bash"># Muevete a la ruta: /opt/lampp/htdocs
+                    <div class="scroll-container">
+                        <pre id="cod11"><code class="language-bash"># Muevete a la ruta: /opt/lampp/htdocs
 cd /opt/lampp/htdocs
 
 # Ejecuta el script
 ./install.sh</code></pre>
+                    </div>
                 </div>
                 <p class="dependencias-bajo">MacOs</p>
                 <div class="codigo-container">
                     <button class="copiar-codigo" onclick="copiarCodigo('cod12')">
                         <i class="far fa-copy"></i>
                     </button>
-                    <pre id="cod12"><code class="language-bash"># Muevete a la ruta: /Applications/XAMPP/htdocs
+                    <div class="scroll-container">
+                        <pre id="cod12"><code class="language-bash"># Muevete a la ruta: /Applications/XAMPP/htdocs
 cd /Applications/XAMPP/htdocs
 
 # Ejecuta el script
 ./install.sh</code></pre>
+                    </div>
                 </div>
                 <p class="dependencias">Instalación finalizada (Linux/MacOs/Windows)</p>
                 <p class="description">Cuando haya concluido la instalación ejecuta en tu terminal:</p>
@@ -267,7 +287,9 @@ cd /Applications/XAMPP/htdocs
                     <button class="copiar-codigo" onclick="copiarCodigo('cod13')">
                         <i class="far fa-copy"></i>
                     </button>
-                    <pre id="cod13"><code class="language-bash">code P_UPPStore/blue_app</code></pre>
+                    <div class="scroll-container">
+                        <pre id="cod13"><code class="language-bash">code P_UPPStore/blue_app</code></pre>
+                    </div>
                 </div>
                 <p class="description">Esto abrira el proyecto en VSCode (recuerda que puede ser el editor de tu preferencia).</p>
             </article>
@@ -283,14 +305,18 @@ cd /Applications/XAMPP/htdocs
                     <button class="copiar-codigo" onclick="copiarCodigo('cod14')">
                         <i class="far fa-copy"></i>
                     </button>
-                    <pre id="cod14"><code class="language-bash">npm run dev</code></pre>
+                    <div class="scroll-container">
+                        <pre id="cod14"><code class="language-bash">npm run dev</code></pre>
+                    </div>
                 </div>
                 <p class="description">En la segunda añade:</p>
                 <div class="codigo-container">
                     <button class="copiar-codigo" onclick="copiarCodigo('cod15')">
                         <i class="far fa-copy"></i>
                     </button>
-                    <pre id="cod15"><code class="language-bash">php artisan serve</code></pre>
+                    <div class="scroll-container">
+                        <pre id="cod15"><code class="language-bash">php artisan serve</code></pre>
+                    </div>
                 </div>
                 <p class="description">Esto iniciara el servidor de desarrollo y el servidor de Laravel, respectivamente.</p>
                 <p class="description">Abre tu navegador y dirígete a la siguiente dirección:</p>
@@ -298,7 +324,9 @@ cd /Applications/XAMPP/htdocs
                     <button class="copiar-codigo" onclick="copiarCodigo('cod16')">
                         <i class="far fa-copy"></i>
                     </button>
-                    <pre id="cod16"><code class="language-bash">http://localhost:8000</code></pre>
+                    <div class="scroll-container">
+                        <pre id="cod16"><code class="language-bash">http://localhost:8000</code></pre>
+                    </div>
                 </div>
                 <div class="diagram-container">
                     <img src="/resources/Images/Documentation/navegator.png" alt="Diagrama de Relaciones del Sistema">
@@ -314,7 +342,9 @@ cd /Applications/XAMPP/htdocs
                     <button class="copiar-codigo" onclick="copiarCodigo('cod17')">
                         <i class="far fa-copy"></i>
                     </button>
-                    <pre id="cod17"><code class="language-bash">git pull</code></pre>
+                    <div class="scroll-container">
+                        <pre id="cod17"><code class="language-bash">git pull</code></pre>
+                    </div>
                 </div>
                 <div class="diagram-container">
                     <img src="/resources/Images/Other/CMS_dog.png" alt="Diagrama de Relaciones del Sistema">
@@ -326,14 +356,23 @@ cd /Applications/XAMPP/htdocs
         <script>
         function copiarCodigo(id) {
             const codigo = document.getElementById(id);
-            navigator.clipboard.writeText(codigo.innerText)
-                .then(() => {
-                    const btn = codigo.previousElementSibling;
-                    btn.innerHTML = '<i class="fas fa-check"></i>';
-                    setTimeout(() => {
-                        btn.innerHTML = '<i class="far fa-copy"></i>';
-                    }, 2000);
-                });
+            const range = document.createRange();
+            range.selectNode(codigo);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            
+            try {
+                document.execCommand('copy');
+                const btn = codigo.closest('.codigo-container').querySelector('.copiar-codigo');
+                btn.innerHTML = '<i class="fas fa-check"></i>';
+                setTimeout(() => {
+                    btn.innerHTML = '<i class="far fa-copy"></i>';
+                }, 2000);
+            } catch (err) {
+                console.error("Error al copiar: ", err);
+            } finally {
+                window.getSelection().removeAllRanges();
+            }
         }
         </script>
     </div>
