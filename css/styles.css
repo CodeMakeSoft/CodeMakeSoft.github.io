@@ -612,7 +612,6 @@ li {
 
 .codigo-container pre {
     overflow-x: auto; /* El scroll ahora está en el pre */
-    padding-top: 10px; /* Espacio para el botón */
     margin: 0; /* Eliminar márgenes predeterminados */
 }
 
@@ -627,6 +626,12 @@ li {
     border-radius: 4px;
     padding: 5px 10px;
     z-index: 10;
+}
+
+.scroll-container {
+    overflow-x: auto;
+    width: 100%;
+    /* padding-top: 40px; Espacio para el botón */
 }
 
 /* Scroll para WebKit (Chrome/Safari) */
