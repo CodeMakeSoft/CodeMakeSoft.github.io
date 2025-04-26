@@ -746,10 +746,6 @@ h1 {
     .tech-card {
         min-height: 350px;
     }
-
-    .tech-header {
-        margin-top: 50px;
-    }
     
     .card-front {
         padding: 1.5rem 1rem;
