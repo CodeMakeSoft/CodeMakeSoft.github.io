@@ -232,7 +232,7 @@ h1 {
     align-items: center;
     justify-content: center;
     background: rgba(0, 0, 0, 0.3);
-    border: 2px solid var(--accent);
+    border: 1.5px solid var(--accent);
     padding: 10px;
     transition: all 0.5s ease;
 }
@@ -243,8 +243,8 @@ h1 {
 }
 
 .profile-img {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     object-fit: contain;
     transition: all 0.5s ease;
     filter: drop-shadow(0 0 5px rgba(0, 240, 255, 0.5));
