@@ -3,6 +3,7 @@
     --primary: #ffffff;
     --secondary: #e0e0e0;
     --dark: #0a0a14;
+    --semidark: #232423;
     --accent: #00f0ff;
     --card-bg: rgba(20, 20, 40, 0.8);
     --footer-bg: rgba(15, 15, 30, 0.95);
@@ -582,6 +583,48 @@ h1 {
     background: white;
     margin: 5px 0;
     transition: all 0.3s ease;
+}
+
+/* Manual */
+.manual-instalacion {
+    background: var(--semidark);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.manual-paso {
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1.5rem;
+}
+
+.codigo-container {
+    position: relative;
+    background: #1e1e1e;
+    border-radius: 5px;
+    padding: 1rem;
+    color: #d4d4d4;
+    overflow-x: auto;
+}
+
+.copiar-codigo {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+.problema {
+    background: #fff8e6;
+    padding: 1rem;
+    border-left: 4px solid #ffc107;
+    margin: 1rem 0;
 }
 
 /* Responsive Design */
