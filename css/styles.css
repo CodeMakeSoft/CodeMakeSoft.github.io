@@ -606,13 +606,13 @@ li {
     border-radius: 5px;
     padding: 1rem;
     color: #d4d4d4;
-    overflow: visible; /* Importante: permitir que el botón se muestre fuera del contenedor */
+    overflow: visible; /* permitir que el botón se muestre fuera del contenedor */
     margin: 1rem 0;
 }
 
 .codigo-container pre {
     overflow-x: auto; /* El scroll ahora está en el pre */
-    padding-top: 40px; /* Espacio para el botón */
+    padding-top: 10px; /* Espacio para el botón */
     margin: 0; /* Eliminar márgenes predeterminados */
 }
 
@@ -644,14 +644,14 @@ li {
 }
 
 .download-link {
-    color: #4FC3F7; /* Azul claro para fondo oscuro */
+    color: var(--highlight);
     text-decoration: underline;
     font-weight: 600;
     transition: color 0.3s, text-decoration 0.3s;
 }
 
 .download-link:hover {
-    color: #29B6F6; /* Azul más brillante al pasar el mouse */
+    color: var(--main);
     text-decoration: none;
 }
 
@@ -675,7 +675,7 @@ li {
 
 .icon-space {
     margin-right: 0.5em; /* Espacio entre ícono y texto */
-    color: var(--highlight); /* También un azul suave */
+    color: var(--highlight);
 }
 
 /* Responsive Design */
