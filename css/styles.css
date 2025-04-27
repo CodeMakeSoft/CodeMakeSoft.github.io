@@ -666,16 +666,18 @@ li {
     vertical-align: middle;
 }
 
-.dependencias {
+.description {
     color: var(--primary);
     margin: 1rem 0;
     font-size: 1.2rem;
+    text-align: justify;
 }
 
-.dependencias-bajo {
+.description-two {
     color: var(--primary);
     margin: 1rem 0;
     font-size: 0.9rem;
+    text-align: justify;
 }
 
 .icon-space {
@@ -831,11 +833,11 @@ li {
         margin-bottom: 2rem;
     }
 
-    .dependencias {
+    .description {
         font-size: 1rem;
     }
 
-    .dependencias-bajo {
+    .description-two {
         font-size: 0.8rem;
     }
 

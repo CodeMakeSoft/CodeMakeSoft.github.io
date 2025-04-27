@@ -76,8 +76,8 @@
                         </a></li>
                     </ul>
                 <h2 class="module-title"><i class="fas fa-terminal"></i> INSTALACIÓN POR CONSOLA (LINUX/MACOS)</h2>
-                <p class="dependencias">Composer</p>
-                <p class="dependencias-bajo">Linux & MacOs</p>
+                <p class="description">Composer</p>
+                <p class="description-two">Linux & MacOs</p>
                 <div class="codigo-container">
                 <button class="copiar-codigo" onclick="copiarCodigo('cod1')">
                     <i class="far fa-copy"></i>
@@ -91,8 +91,8 @@ sudo mv composer.phar /usr/local/bin/composer
 composer --version</code></pre>
                     </div>
                 </div>
-                <p class="dependencias">Node.js y npm</p>
-                <p class="dependencias-bajo">Linux (Debian/Ubuntu)</p>
+                <p class="description">Node.js y npm</p>
+                <p class="description-two">Linux (Debian/Ubuntu)</p>
                 <div class="codigo-container">
                     <button class="copiar-codigo" onclick="copiarCodigo('cod2')">
                         <i class="far fa-copy"></i>
@@ -107,7 +107,7 @@ node --version
 npm --version</code></pre>
                     </div>
                 </div>
-                <p class="dependencias-bajo">MacOs</p>
+                <p class="description-two">MacOs</p>
                 <div class="codigo-container">
                     <button class="copiar-codigo" onclick="copiarCodigo('cod3')">
                         <i class="far fa-copy"></i>
@@ -121,8 +121,8 @@ node --version
 npm --version</code></pre>
                     </div>
                 </div>
-                <p class="dependencias">Git</p>
-                <p class="dependencias-bajo">Linux (Debian/Ubuntu)</p>
+                <p class="description">Git</p>
+                <p class="description-two">Linux (Debian/Ubuntu)</p>
                 <div class="codigo-container">
                     <button class="copiar-codigo" onclick="copiarCodigo('cod4')">
                         <i class="far fa-copy"></i>
@@ -136,7 +136,7 @@ sudo apt install git
 git --version</code></pre>
                     </div>
                 </div>
-                <p class="dependencias-bajo">MacOs</p>
+                <p class="description-two">MacOs</p>
                 <div class="codigo-container">
                     <button class="copiar-codigo" onclick="copiarCodigo('cod5')">
                         <i class="far fa-copy"></i>
@@ -149,8 +149,8 @@ brew install git
 git --version</code></pre>
                     </div>
                 </div>
-                <p class="dependencias">VSCode</p>
-                <p class="dependencias-bajo">Linux (Debian/Ubuntu)</p>
+                <p class="description">VSCode</p>
+                <p class="description-two">Linux (Debian/Ubuntu)</p>
                 <div class="codigo-container">
                     <button class="copiar-codigo" onclick="copiarCodigo('cod6')">
                         <i class="far fa-copy"></i>
@@ -164,7 +164,7 @@ sudo apt install code
 code --version</code></pre>
                     </div>
                 </div>
-                <p class="dependencias-bajo">MacOs</p>
+                <p class="description-two">MacOs</p>
                 <div class="codigo-container">
                     <button class="copiar-codigo" onclick="copiarCodigo('cod7')">
                         <i class="far fa-copy"></i>
@@ -177,17 +177,17 @@ brew install --cask visual-studio-code
 code --version</code></pre>
                     </div>
                 </div>
-                <p class="dependencias">XAMPP</p>
+                <p class="description">XAMPP</p>
                 <p class="description">Descarga y ejecuta el .run para Linux o el .dmg para MacOs (asegurate de darle permisos de ejecución) desde
                     <a href="https://www.apachefriends.org/es/download.html" class="download-link" target="_blank" rel="noopener noreferrer">
-                        aqui.
+                        aquí.
                     </a>
                 </p>
             </article>
         
             <article class="manual-paso">
                 <h2 class="module-title"><i class="fas fa-cogs"></i> CONSIDERACIONES INICIALES</h2>
-                <p class="dependencias">php.ini</p>
+                <p class="description">php.ini</p>
                 <div class="codigo-container">
                     <button class="copiar-codigo" onclick="copiarCodigo('cod8')">
                         <i class="far fa-copy"></i>
@@ -203,42 +203,42 @@ extension=pdo_mysql
 extension=zip</code></pre>
                     </div>
                 </div>
-                <p class="dependencias">Localhost</p>
+                <p class="description">Localhost</p>
                 <p class="description">Enciende tu servidor de Apache y MySQL desde <strong><i>XAMPP</i></strong> o la terminal si usas Linux/Mac.</p>
                 <div class="diagram-container">
-                    <img src="/resources/Images/Documentation/phpMyAdmin.png" alt="Diagrama de Relaciones del Sistema">
+                    <img src="/resources/Images/Documentation/phpMyAdmin.png" alt="Apache y MySQL encendidos">
                     <p class="diagram-caption">Figura 1: Apache y MySQL encendidos.</p>
                 </div>
-                <p class="dependencias">Creación de la base de datos</p>
+                <p class="description">Creación de la base de datos</p>
                 <p class="description">Crea la base de datos desde phpMyAdmin llamada: <strong><i>blue_app</i></strong></p>
                 <div class="diagram-container">
-                    <img src="/resources/Images/Documentation/makeDatabase.png" alt="Diagrama de Relaciones del Sistema">
+                    <img src="/resources/Images/Documentation/makeDatabase.png" alt="Creación de la base de datos">
                     <p class="diagram-caption">Figura 2: Creación de la base de datos.</p>
                 </div>
-                <p class="dependencias">Consulta SQL</p>
+                <p class="description">Consulta SQL</p>
                 <div class="codigo-container">
                     <button class="copiar-codigo" onclick="copiarCodigo('cod9')">
                         <i class="far fa-copy"></i>
                     </button>
                     <pre id="cod9"><code class="language-bash">CREATE DATABASE blue_app;</code></pre>
                 </div>
-                <p class="dependencias">Desactivar antivirus (únicamente en Windows)</p>
+                <p class="description">Desactivar antivirus (únicamente en Windows)</p>
                 <p class="description">El antivirus puede bloquear archivos o conexiones de Composer, confundiéndolos con falsos positivos (cree que son virus ya que descarga y descomprime muchos archivos al mismo tiempo), causando errores. Desactiva la <strong><i>protección en tiempo real</i></strong> temporalmente en Defender o cualquier otro antivirus.</p>
                 <div class="diagram-container">
-                    <img src="/resources/Images/Documentation/antivirus_disabled.jpeg" alt="Diagrama de Relaciones del Sistema">
+                    <img src="/resources/Images/Documentation/antivirus_disabled.jpeg" alt="Desactivar antivirus">
                     <p class="diagram-caption">Figura 3: Desactivar protección en tiempo real.</p>
                 </div>
             </article>
         
             <article class="manual-paso">
                 <h2 class="module-title"><i class="fas fa-tools"></i> INSTALACIÓN</h2>
-                <p class="dependencias">Descarga el siguiente script y guárdalo en <strong><i>htdocs</i></strong>:&nbsp; 
+                <p class="description">Descarga el siguiente script y guárdalo en <strong><i>htdocs</i></strong>:&nbsp; 
                     <a href="/resources/Instalation/install.sh" class="download-link" download>
                         install.sh<i class="fas fa-download"></i>
                     </a>
                 </p> <p>&nbsp;</p>
                 <p class="description">Posiciónate en el directorio <strong><i>htdocs</i></strong> y ejecuta una shell con interprete de <strong><i>Bash</i></strong>.</p>
-                <p class="dependencias">Windows</p>
+                <p class="description">Windows</p>
                 <p class="description">Ejecuta <strong><i>Git Bash</i></strong> (se instalo junto con Git) y añade estos comandos:</p>
 
                 <div class="codigo-container">
@@ -253,9 +253,9 @@ cd C:/xampp/htdocs
 ./install.sh</code></pre>
                     </div>
                 </div>
-                <p class="dependencias">Linux/MacOs</p>
+                <p class="description">Linux/MacOs</p>
                 <p class="description">Ejecuta la terminal nativa o la de tu preferencia y añade estos comandos:</p>
-                <p class="dependencias-bajo">Linux</p>
+                <p class="description-two">Linux</p>
                 <div class="codigo-container">
                     <button class="copiar-codigo" onclick="copiarCodigo('cod11')">
                         <i class="far fa-copy"></i>
@@ -268,7 +268,7 @@ cd /opt/lampp/htdocs
 ./install.sh</code></pre>
                     </div>
                 </div>
-                <p class="dependencias-bajo">MacOs</p>
+                <p class="description-two">MacOs</p>
                 <div class="codigo-container">
                     <button class="copiar-codigo" onclick="copiarCodigo('cod12')">
                         <i class="far fa-copy"></i>
@@ -281,7 +281,7 @@ cd /Applications/XAMPP/htdocs
 ./install.sh</code></pre>
                     </div>
                 </div>
-                <p class="dependencias">Instalación finalizada (Linux/MacOs/Windows)</p>
+                <p class="description">Instalación finalizada (Linux/MacOs/Windows)</p>
                 <p class="description">Cuando haya concluido la instalación ejecuta en tu terminal:</p>
                 <div class="codigo-container">
                     <button class="copiar-codigo" onclick="copiarCodigo('cod13')">
@@ -297,7 +297,7 @@ cd /Applications/XAMPP/htdocs
             <article class="manual-paso">
                 <h2 class="module-title"><i class="fas fa-play"></i> EJECUCIÓN DEL PROYECTO</h2>
                 <div class="diagram-container">
-                    <img src="/resources/Images/Documentation/vscode.png" alt="Diagrama de Relaciones del Sistema">
+                    <img src="/resources/Images/Documentation/vscode.png" alt="Project en VSCode">
                     <p class="diagram-caption">Figura 4: Proyecto en VSCode.</p>
                 </div>
                 <p class="description">Ejecuta dos terminales sobre <strong><i>blue_app</i></strong>, en la primera añade:</p>
@@ -329,15 +329,29 @@ cd /Applications/XAMPP/htdocs
                     </div>
                 </div>
                 <div class="diagram-container">
-                    <img src="/resources/Images/Documentation/navegator.png" alt="Diagrama de Relaciones del Sistema">
+                    <img src="/resources/Images/Documentation/navegator.png" alt="UPP Store">
                     <p class="diagram-caption">Figura 5: Proyecto ejecutado.</p>
                 </div>
-            </article>
+            </article> 
             <article class="manual-paso">
-                <h2 class="module-title"><i class="fas fa-user-cog"></i> PRUEBA EL PROYECTO</h2>
-                <p class="description">¡Sí tienes cualquier duda sobre la instalación no dudes en contactarnos!</p>
-                <p class="description-bajo">El .env fue configurado en automático, así como las dependencias, además puedes cambiar la información para PayPal.</p>
-                <p class="description-bajo">No olvides hacer pull periódicamente para recibir los cambios y actualizaciones:</p>
+                <h2 class="module-title"><i class="fas fa-book"></i> RECURSOS</h2>
+                <p class="description">
+                    Bienvenido a la sección de recursos de <strong>UPP Store</strong>. Aquí encontrarás toda la información necesaria para comprender el funcionamiento y la estructura del proyecto.
+                </p>
+                <p class="description"><i class="fas fa-book-open icon-space"></i>
+                    Puedes descargar la documentación directamente desde&nbsp; 
+                    <a href="#" class="download-link" download>aquí <i class="fas fa-download"></i></a>
+                </p>
+                <p class="description"><i class="fas fa-eye icon-space"></i>
+                    Puedes acceder a los diseños de Figma desde&nbsp; 
+                    <a href="https://www.figma.com/proto/9nPVHp06NMRrkn50VJmzNm/e-commerce?node-id=372-69&p=f&t=MqUdKKpneNYOTjQw-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=372%3A69" class="download-link" target="_blank" rel="noopener noreferrer">
+                        aquí <i class="fas fa-external-link-alt"></i></a>
+                </p>
+                <p class="description"><i class="fas fa-vial icon-space"></i>
+                    Puedes descargar las pruebas realizadas desde&nbsp; 
+                    <a href="#" class="download-link" download>aquí <i class="fas fa-download"></i></a>
+                </p>
+                <p class="description-bajo">El .env fue configurado en automático, así como las description, además puedes cambiar la información para PayPal. No olvides hacer pull periódicamente para recibir los cambios y actualizaciones:</p>
                 <div class="codigo-container">
                     <button class="copiar-codigo" onclick="copiarCodigo('cod17')">
                         <i class="far fa-copy"></i>
@@ -346,8 +360,14 @@ cd /Applications/XAMPP/htdocs
                         <pre id="cod17"><code class="language-bash">git pull</code></pre>
                     </div>
                 </div>
+                <p class="description">Ante cualquier duda o consulta, no dudes en ponerte en contacto con nuestro equipo de soporte.</p>
+            </article>
+            <article class="manual-paso">
+                <h2 class="module-title"><i class="fas fa-handshake"></i> AGRADECIMIENTOS</h2>
+                <p class="description">¡Sí tienes cualquier duda sobre la instalación no dudes en contactarnos!</p>
                 <div class="diagram-container">
-                    <img src="/resources/Images/Other/CMS_dog.png" alt="Diagrama de Relaciones del Sistema">
+                    <img src="/resources/Images/Other/CMS_dog.png" alt="CMS Dog">
+                    <p class="diagram-caption">¡Gracias por probar el proyecto!</p>
                     <p class="diagram-caption">El equipo de Code Make Soft: ¡Gracias!</p>
                 </div>
             </article>
