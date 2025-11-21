@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attune | Gestión de RH Simplificada</title>
+    <link rel="icon" type="image/png" href="/resources/Images/Logos/CMS_white.png">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Estilos extra para esta página específica */
+        
+        /* Logo con brillo neón */
+        .header-logo {
+            max-width: 160px;
+            height: auto;
+            margin-bottom: 1.5rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            filter: drop-shadow(0 0 15px rgba(0, 240, 255, 0.4)); 
+            transition: all 0.4s ease;
+        }
+
+        .header-logo:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 25px rgba(0, 240, 255, 0.8));
+        }
+
+        /* Estilo para la definición de "Attune" */
+        .definition-box {
+            border-left: 4px solid var(--main);
+            padding-left: 20px;
+            margin: 20px 0;
+        }
+        .phonetic {
+            font-family: 'Courier New', monospace;
+            color: var(--secondary);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        /* Estilo para contenedores de fotos rectangulares */
+        .team-img-container {
+            width: 100%;
+            height: 220px;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .team-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .tech-card:hover .team-img-container img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="tech-background"></div>
+    <div id="navbar-container"></div>
+
+    <header class="tech-header">
+        <div class="header-content">
+            <img src="/resources/Images/Logos/attuneIcon.png" alt="Logo Attune" class="header-logo">
+            
+            <h1>GESTIÓN SIMPLIFICADA</h1>
+            <h2 style="font-size: 1.4rem; color: var(--main); margin-bottom: 1rem; font-weight: 400;">Para Pequeñas y Medianas Empresas</h2>
+            
+            <p class="tagline" style="max-width: 800px; margin: 0 auto 2rem auto;">
+                <span class="white">Attune</span> centraliza tu información, automatiza procesos y reduce el tiempo administrativo, permitiéndote enfocarte en lo que realmente importa: hacer crecer tu negocio.
+            </p>
+
+            <a href="#planes" style="
+                background: rgba(0, 240, 255, 0.1);
+                border: 1px solid var(--main);
+                color: var(--primary);
+                padding: 12px 35px;
+                font-size: 1.1rem;
+                text-decoration: none;
+                font-weight: 600;
+                border-radius: 30px;
+                transition: all 0.3s ease;
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
+            " onmouseover="this.style.background='var(--main)'; this.style.color='var(--dark)'" onmouseout="this.style.background='rgba(0, 240, 255, 0.1)'; this.style.color='var(--primary)'">
+                Comenzar Prueba Gratuita <i class="fas fa-rocket"></i>
+            </a>
+        </div>
+    </header>
+
+    <div class="doc-container">
+
+        <div class="diagram-section" style="border: 1px solid var(--main);">
+            <h2><i class="fas fa-quote-left"></i> La Esencia del Nombre</h2>
+            
+            <div class="definition-box">
+                <h1 style="font-size: 3rem; margin-bottom: 0; color: var(--primary);">Attune</h1>
+                <span class="phonetic">/əˈtjuːn/ • verbo</span>
+                
+                <p class="description" style="margin-top: 1rem;">
+                    <strong>Etimología:</strong> Del inglés <em>"to bring into harmony"</em> (poner en armonía) o <em>"tune"</em> (sintonizar).
+                </p>
+                <p class="description-two">
+                    En el contexto de nuestra plataforma, <strong>Attune</strong> representa la capacidad de <strong>sintonizar</strong> los objetivos de la empresa con el talento de sus empleados. Buscamos crear una armonía operativa donde la gestión de recursos humanos deje de ser ruido administrativo y se convierta en una sinfonía de productividad y crecimiento.
+                </p>
+            </div>
+        </div>
+
+        <div class="module-card">
+            <div class="module-title">
+                <div class="icon"><i class="fas fa-users-cog"></i></div>
+                <h2>Tu aliado en Recursos Humanos</h2>
+            </div>
+            <div class="description">
+                <p>Attune es una aplicación multiplataforma diseñada específicamente para PYMES. Nuestro objetivo es optimizar la gestión de personal mediante tecnologías que facilitan el acceso, la automatización y la centralización de la información.</p>
+                <br>
+                <p class="description-two" style="border-left: 3px solid var(--highlight); padding-left: 15px;">
+                    Olvídate de las hojas de cálculo dispersas y los errores por duplicidad; con Attune, toda la información de tus empleados vive en una única base de datos segura.
+                </p>
+            </div>
+
+             <h3 style="margin-top: 2rem; color: var(--main);">Beneficios Clave</h3>
+             <ul class="features-list" style="font-size: 1.1rem;">
+                 <li><i class="fas fa-bolt icon-space"></i> <strong>Eficiencia Operativa:</strong> Reduce significativamente el tiempo en tareas administrativas.</li>
+                 <li><i class="fas fa-shield-alt icon-space"></i> <strong>Seguridad de Datos:</strong> Encriptación robusta para datos sensibles.</li>
+                 <li><i class="fas fa-mobile-alt icon-space"></i> <strong>Acceso Multiplataforma:</strong> Gestiona desde web o móvil en cualquier lugar.</li>
+             </ul>
+        </div>
+
+        <div class="diagram-section" style="background: transparent; border: none; padding-left: 0; margin-bottom: 0;">
+            <h2><i class="fas fa-layer-group"></i> Funcionalidades</h2>
+        </div>
+
+        <div class="presentation-grid">
+            <div class="tech-card">
+                <div class="card-front">
+                    <div class="img-container">
+                        <i class="fas fa-id-badge" style="font-size: 3rem; color: var(--main);"></i>
+                    </div>
+                    <h3>Perfiles Centralizados</h3>
+                    <div class="tech-divider"></div>
+                    <p class="description-two">Registro completo y digital de cada empleado (datos personales, laborales y contacto) en un solo lugar.</p>
+                </div>
+            </div>
+
+            <div class="tech-card">
+                <div class="card-front">
+                    <div class="img-container">
+                        <i class="fas fa-plane-departure" style="font-size: 3rem; color: var(--main);"></i>
+                    </div>
+                    <h3>Vacaciones y Ausencias</h3>
+                    <div class="tech-divider"></div>
+                    <p class="description-two">Gestión digital de solicitudes, notificaciones y aprobaciones. Calendario de equipo siempre actualizado.</p>
+                </div>
+            </div>
+
+            <div class="tech-card">
+                <div class="card-front">
+                    <div class="img-container">
+                        <i class="fas fa-chart-line" style="font-size: 3rem; color: var(--main);"></i>
+                    </div>
+                    <h3>Evaluaciones</h3>
+                    <div class="tech-divider"></div>
+                    <p class="description-two">Impulsa el talento con herramientas para seguimiento de objetivos y evaluaciones de desempeño.</p>
+                </div>
+            </div>
+
+            <div class="tech-card">
+                <div class="card-front">
+                    <div class="img-container">
+                        <i class="fas fa-folder-open" style="font-size: 3rem; color: var(--main);"></i>
+                    </div>
+                    <h3>Gestor Documental</h3>
+                    <div class="tech-divider"></div>
+                    <p class="description-two">Almacenamiento seguro de contratos e identificaciones bajo estrictas medidas de seguridad.</p>
+                </div>
+            </div>
+
+            <div class="tech-card">
+                <div class="card-front">
+                    <div class="img-container">
+                        <i class="fas fa-sitemap" style="font-size: 3rem; color: var(--main);"></i>
+                    </div>
+                    <h3>Gestión Organizacional</h3>
+                    <div class="tech-divider"></div>
+                    <p class="description-two">
+                        Define la estructura de tu empresa con precisión. Crea departamentos, asigna roles específicos y establece jerarquías claras para un flujo de trabajo ordenado.
+                    </p>
+                </div>
+            </div>
+
+            <div class="tech-card">
+                <div class="card-front">
+                    <div class="img-container">
+                        <i class="fas fa-calendar" style="font-size: 3rem; color: var(--main);"></i>
+                    </div>
+                    <h3>Eventos Corporativos</h3>
+                    <div class="tech-divider"></div>
+                    <p class="description-two">
+                        Fomenta la cultura empresarial. Crea y notifica sobre reuniones, capacitaciones o celebraciones importantes directamente en el calendario compartido de la organización.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="planes" class="diagram-section" style="background: transparent; border: none; padding-left: 0; margin-top: 2rem;">
+            <h2><i class="fas fa-tags"></i> Planes y Precios</h2>
+        </div>
+
+        <div class="presentation-grid">
+            <div class="tech-card" style="min-height: 400px;">
+                <div class="card-front">
+                    <h3 style="color: var(--primary);">Prueba</h3>
+                    <h2 style="font-size: 2.5rem; color: var(--main); margin: 10px 0;">$0</h2>
+                    <p class="position">15 Días</p>
+                    <div class="tech-divider"></div>
+                    <ul style="text-align: left; list-style: none; padding: 0; font-size: 0.9rem;">
+                        <li><i class="fas fa-check icon-space"></i> Hasta 2 empleados</li>
+                        <li><i class="fas fa-check icon-space"></i> Funciones básicas</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tech-card" style="min-height: 400px;">
+                <div class="card-front">
+                    <h3 style="color: #cd7f32;">Bronce</h3>
+                    <h2 style="font-size: 2.5rem; color: var(--main); margin: 10px 0;">$99<span style="font-size: 1rem;">/mes</span></h2>
+                    <p class="position">Microempresas</p>
+                    <div class="tech-divider"></div>
+                    <ul style="text-align: left; list-style: none; padding: 0; font-size: 0.9rem;">
+                        <li><i class="fas fa-check icon-space"></i> 1 a 8 empleados</li>
+                        <li><i class="fas fa-check icon-space"></i> Ideal para iniciar</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tech-card" style="min-height: 400px; border-color: var(--main);">
+                <div class="card-front" style="background: rgba(0, 240, 255, 0.05);">
+                    <h3 style="color: #c0c0c0;">Plata</h3>
+                    <h2 style="font-size: 2.5rem; color: var(--main); margin: 10px 0;">$129<span style="font-size: 1rem;">/mes</span></h2>
+                    <p class="position">Pymes</p>
+                    <div class="tech-divider"></div>
+                    <ul style="text-align: left; list-style: none; padding: 0; font-size: 0.9rem;">
+                        <li><i class="fas fa-check icon-space"></i> 1 a 50 empleados</li>
+                        <li><i class="fas fa-check icon-space"></i> Módulo de Evaluaciones</li>
+                        <li><i class="fas fa-star icon-space"></i> <strong>Más popular</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tech-card" style="min-height: 400px;">
+                <div class="card-front">
+                    <h3 style="color: #ffd700;">Oro</h3>
+                    <h2 style="font-size: 2.5rem; color: var(--main); margin: 10px 0;">$299<span style="font-size: 1rem;">/mes</span></h2>
+                    <p class="position">Corporativo</p>
+                    <div class="tech-divider"></div>
+                    <ul style="text-align: left; list-style: none; padding: 0; font-size: 0.9rem;">
+                        <li><i class="fas fa-check icon-space"></i> +250 empleados</li>
+                        <li><i class="fas fa-check icon-space"></i> Gestión Avanzada</li>
+                        <li><i class="fas fa-check icon-space"></i> Departamentos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="module-card">
+            <div class="module-title">
+                <div class="icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                <h2>Presupuesto del MVP</h2>
+            </div>
+            <p class="description">Desglose de inversión estimada para el desarrollo inicial.</p>
+
+            <div class="scroll-container">
+                <table class="dictionary-table">
+                    <thead>
+                        <tr>
+                            <th>Concepto</th>
+                            <th>Detalle</th>
+                            <th style="text-align: right;">Monto (MXN)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="pk">Costos Directos</td>
+                            <td>Recursos Humanos (Desarrollo)</td>
+                            <td style="text-align: right;">$302,400</td>
+                        </tr>
+                        <tr>
+                            <td class="fk">Costos Indirectos</td>
+                            <td>Gastos Operativos</td>
+                            <td style="text-align: right;">$30,240</td>
+                        </tr>
+                        <tr style="background: rgba(255, 255, 255, 0.05);">
+                            <td class="unique">Subtotal</td>
+                            <td>Costo Base</td>
+                            <td style="text-align: right; font-weight: bold;">$332,640</td>
+                        </tr>
+                        <tr>
+                            <td class="default">Reserva</td>
+                            <td>Contingencia (15% s/línea base)</td>
+                            <td style="text-align: right;">$49,896</td>
+                        </tr>
+                        <tr style="border-top: 2px solid var(--main);">
+                            <td style="color: var(--main); font-weight: bold; font-size: 1.2rem;">TOTAL</td>
+                            <td style="color: var(--white); opacity: 0.7;">Presupuesto Final del Proyecto</td>
+                            <td style="color: var(--main); font-weight: bold; font-size: 1.2rem; text-align: right;">$382,536</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer class="tech-footer">
+        <div class="footer-content">
+            <div class="footer-contact">
+                <p>Conecta con nosotros:</p>
+                <a href="mailto:codemakesoft@gmail.com" class="email-link">
+                    <i class="fas fa-envelope"></i> codemakesoft@gmail.com
+                </a>
+            </div>
+            <div class="footer-social">
+                <a href="https://x.com/theuppstore" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/codemakesoft_/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/CodeMakeSoft" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2025 CODE MAKE SOFT. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="/js/script.js"></script>
+</body>
+</html>

@@ -24,8 +24,8 @@ function setupNavbar() {
     // Dinamic title
     const pageTitles = {
         'index.html': 'CODE MAKE SOFT',
-        'diagrams.html': 'DIAGRAMAS',
-        'dictionary.html': 'DICCIONARIO',
+        'about-us.html': 'NOSOTROS',
+        'attune.html': 'ATTUNE',
         'manual.html': 'MANUAL'
     };
     if (titleElement && pageTitles[currentPage]) {

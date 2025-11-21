@@ -528,6 +528,15 @@ li {
     background: rgba(255, 255, 255, 0.03);
 }
 
+.white {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.withoutdecoration {
+    text-decoration: none;
+}
+
 .pk {
     color: #4caf50; /* Verde */
     font-weight: 600;
@@ -684,6 +693,37 @@ li {
     margin-right: 0.5em; /* Espacio entre ícono y texto */
     color: var(--highlight);
 }
+
+.team-img-container {
+        width: 100%;           /* Ocupa todo el ancho interno de la tarjeta */
+        height: 400px;         /* Altura rectangular más grande */
+        border-radius: 20px;   /* Bordes redondeados (no círculo completo) */
+        margin-bottom: 1.5rem;
+        overflow: hidden;      /* Asegura que la imagen respete el borde redondeado */
+        border: 1px solid var(--main);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        transition: all 0.5s ease;
+        position: relative;
+        z-index: 1;
+    }
+
+    .team-img-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;     /* Llena el rectángulo sin deformar la imagen */
+        display: block;
+        transition: transform 0.5s ease;
+    }
+
+    /* Efecto Zoom al pasar el mouse */
+    .tech-card:hover .team-img-container img {
+        transform: scale(1.1);
+    }
+    
+    .tech-card:hover .team-img-container {
+        box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+        border-color: var(--highlight);
+    }
 
 /* Responsive Design */
 @media (max-width: 768px) {
