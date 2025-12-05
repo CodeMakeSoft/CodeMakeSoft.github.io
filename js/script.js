@@ -26,7 +26,8 @@ function setupNavbar() {
         'index.html': 'CODE MAKE SOFT',
         'about-us.html': 'NOSOTROS',
         'attune.html': 'ATTUNE',
-        'manual.html': 'MANUAL'
+        'manual.html': 'MANUAL',
+        'diagrams.html': 'DIAGRAMAS'
     };
     if (titleElement && pageTitles[currentPage]) {
         titleElement.textContent = pageTitles[currentPage];
